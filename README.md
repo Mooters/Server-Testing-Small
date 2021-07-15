@@ -1,2 +1,2 @@
 # Server-Testing-Small
-test backend for small projects
+A backend and data store for small projects
