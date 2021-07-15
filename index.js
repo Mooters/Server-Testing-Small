@@ -63,40 +63,12 @@ const generateId = () => {
 app.post('/api/datama', (request, response) => {
   const body = request.body
 
-  if (!body.name) {
-    const entry = {
-      name: "",
-      number: body.number,
-      category: body.category,
-      id: generateId(),
-    }
-  }
-
-  if (!body.number) {
-    const entry = {
-      name: body.name,
-      number: "",
-      category: body.category,
-      id: generateId(),
-    }
-  }
-
-  if (!body.category) {
-    const entry = {
-      name: body.name,
-      number: body.number,
-      category: "",
-      id: generateId(),
-    }
-  } else {
-
-    const entry = {
-      name: body.name,
-      number: body.number,
-      category: body.category,
-      id: generateId(),
-    }
-  }
+   const entry = {
+     name: body.name,
+     number: body.number,
+     category: body.category,
+     id: generateId(),
+   }
 
   datama.items = datama.items.concat(entry)
 
