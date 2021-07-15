@@ -64,28 +64,38 @@ app.post('/api/datama', (request, response) => {
   const body = request.body
 
   if (!body.name) {
-    return response.status(400).json({
-      error: 'name missing'
-    })
+    const entry = {
+      name: "",
+      number: body.number,
+      category: body.category,
+      id: generateId(),
+    }
   }
 
   if (!body.number) {
-    return response.status(400).json({
-      error: 'price missing'
-    })
+    const entry = {
+      name: body.name,
+      number: "",
+      category: body.category,
+      id: generateId(),
+    }
   }
 
   if (!body.category) {
-    return response.status(400).json({
-      error: 'category missing'
-    })
-  }
+    const entry = {
+      name: body.name,
+      number: body.number,
+      category: "",
+      id: generateId(),
+    }
+  } else {
 
-  const entry = {
-    name: body.name,
-    number: body.number,
-    category: body.category,
-    id: generateId(),
+    const entry = {
+      name: body.name,
+      number: body.number,
+      category: body.category,
+      id: generateId(),
+    }
   }
 
   datama.items = datama.items.concat(entry)
