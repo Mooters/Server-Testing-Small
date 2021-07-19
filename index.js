@@ -8,27 +8,27 @@ app.use(express.json())
 let datama = {
   items: [
     {
-      name: "Item 1",
-      number: "15.02",
-      category: "food",
+      name: "Burger",
+      number: "$5.99",
+      category: "Food",
       id: 2
     },
     {
-      name: "Item 2",
-      number: "12376.38",
-      category: "hobbies",
+      name: "Plushie",
+      number: "$17.38",
+      category: "Fun",
       id: 3
     },
     {
-      name: "Item 3",
-      number: "00.00",
-      category: "air",
+      name: "Computer",
+      number: "$1999.99",
+      category: "Electronics",
       id: 4
     },
     {
-      name: "Item 4",
-      number: "asdf",
-      category: "asdf",
+      name: "Oxygen",
+      number: "$0.00",
+      category: "Air",
       id: 5
     }
   ]
